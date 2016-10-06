@@ -430,10 +430,10 @@
 		829847AC1D9D3CCF00C6A9C9 = {
 			isa = PBXGroup;
 			children = (
-				824414631DA2E35200781B61 /* Vendor */,
 				829847B71D9D3CCF00C6A9C9 /* ComicList */,
 				8203388F1DA3C1F0001E7F32 /* HTTPFetcher */,
 				820338CF1DA3DA19001E7F32 /* ImageLoader */,
+				824414631DA2E35200781B61 /* Vendor */,
 				829847B61D9D3CCF00C6A9C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -650,7 +650,7 @@
 					};
 					829847B41D9D3CCF00C6A9C9 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = T5TF72MCE6;
+						DevelopmentTeam = 8Y8DX8Q88R;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1149,10 +1149,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T5TF72MCE6;
+				DEVELOPMENT_TEAM = 8Y8DX8Q88R;
 				INFOPLIST_FILE = ComicList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gonzalezreal.ComicList;
+				PRODUCT_BUNDLE_IDENTIFIER = es.fsgpino.ComicList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1163,10 +1163,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T5TF72MCE6;
+				DEVELOPMENT_TEAM = 8Y8DX8Q88R;
 				INFOPLIST_FILE = ComicList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gonzalezreal.ComicList;
+				PRODUCT_BUNDLE_IDENTIFIER = es.fsgpino.ComicList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

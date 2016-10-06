@@ -1,16 +1,16 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0DFB2368EBD6117C8070C059F36AC854B4A9A71B",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "187DB50FB139155F97A46973D1ED46F68D4BBB1F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "0DFB2368EBD6117C8070C059F36AC854B4A9A71B" : 9223372036854775807,
-    "8B123162C394A0A0A138779108E4C59DD771865A" : 9223372036854775807
+    "8B123162C394A0A0A138779108E4C59DD771865A" : 9223372036854775807,
+    "187DB50FB139155F97A46973D1ED46F68D4BBB1F" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0775B05E-2B6A-4FC1-A4CB-4D5F252BC0FC",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "0DFB2368EBD6117C8070C059F36AC854B4A9A71B" : "ComicList\/",
-    "8B123162C394A0A0A138779108E4C59DD771865A" : "ComicList\/Vendor\/RxSwift\/"
+    "8B123162C394A0A0A138779108E4C59DD771865A" : "ComicList\/Vendor\/RxSwift\/",
+    "187DB50FB139155F97A46973D1ED46F68D4BBB1F" : "ComicList\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ComicList",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -19,7 +19,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gonzalezreal\/ComicList.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0DFB2368EBD6117C8070C059F36AC854B4A9A71B"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "187DB50FB139155F97A46973D1ED46F68D4BBB1F"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ReactiveX\/RxSwift",
