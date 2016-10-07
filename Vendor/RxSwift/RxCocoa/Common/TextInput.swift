@@ -68,14 +68,14 @@ import Foundation
         var rx_text: ControlProperty<String> { get }
     }
 
-    extension UITextField : TextInput {
+    extension UITextField : RxTextInput {
         @available(*, deprecated, renamed: "rx.textInput.text")
         public var rx_text: ControlProperty<String> {
             return self.rx.text
         }
     }
 
-    extension UITextView : TextInput {
+    extension UITextView : RxTextInput {
         @available(*, deprecated, renamed: "rx.textInput.text")
         public var rx_text: ControlProperty<String> {
             return self.rx.text
