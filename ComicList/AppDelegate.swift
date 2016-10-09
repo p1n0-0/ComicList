@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         coordinator = AppCoordinator(window: window)
         coordinator?.start()
-
+		
         return true
     }
 }

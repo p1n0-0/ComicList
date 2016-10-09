@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ComicContainer
 
 /// Displays a list of comic volumes saved by the user
 class VolumeListViewController: UIViewController {

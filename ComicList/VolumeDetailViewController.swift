@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import ComicContainer
 
 /// Displays the details about a volume
 class VolumeDetailViewController: UIViewController {

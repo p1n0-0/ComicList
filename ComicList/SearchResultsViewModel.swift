@@ -8,6 +8,8 @@
 
 import Foundation
 import RxSwift
+import ComicContainer
+import ComicService
 
 protocol SearchResultsViewModelType: class {
 
@@ -31,48 +33,57 @@ protocol SearchResultsViewModelType: class {
     func load(nextPage trigger: Observable<Void>) -> Observable<Int>
 }
 
-// FIXME: This is a mock implementation
 final class SearchResultsViewModel: SearchResultsViewModelType {
 
     let query: String
     var didLoadPage: () -> Void = {}
 
     public var numberOfItems: Int {
-        return items.count
+        return results.numberOfVolumes
     }
 
     public func item(at position: Int) -> Volume {
         precondition(position < numberOfItems)
-        return items[position]
+        return results.volume(at: position)
     }
 
     public func load(nextPage trigger: Observable<Void>) -> Observable<Int> {
         return doLoad(page: 1, nextPage: trigger)
     }
 
-    private var items: [Volume] = []
+	private let client: Client
+	private let container: VolumeContainerType
+	private let results: VolumeResultsType
+	private let disposeBag = DisposeBag()
 
-    init(query: String) {
+	init(query: String, client: Client = Client(), container: VolumeContainerType = VolumeContainer.temporary()) {
         self.query = query
+		self.client = client
+		self.container = container
+		
+		container.load().subscribe().addDisposableTo(disposeBag)
+		
+		results = container.all()
+		results.didUpdate = { [weak self] in
+			self?.didLoadPage()
+		}
     }
 
     private func doLoad(page current: Int, nextPage trigger: Observable<Void>) -> Observable<Int> {
-        items.append(contentsOf: [
-            Volume(identifier: 38656,
-                   title: "Doctor Strange: The Oath",
-                   coverURL: URL(string: "http://comicvine.gamespot.com/api/image/scale_small/1641291-ds__to.jpg"),
-                   publisherName: "Marvel"),
-            Volume(identifier: 67079,
-                   title: "Age Of Ultron",
-                   coverURL: URL(string: "http://comicvine.gamespot.com/api/image/scale_small/3816330-01.jpg"),
-                   publisherName: "Marvel"),
-            Volume(identifier: 39255,
-                   title: "Thanos Imperative",
-                   coverURL: URL(string: "http://comicvine.gamespot.com/api/image/scale_small/1704425-the_thanos_imperative_hc.jpg"),
-                   publisherName: "Marvel")
-        ])
-        didLoadPage()
-
-        return Observable.just(1)
+		
+		let container = self.container
+		
+		return client.searchResults(forQuery: query, page: current)
+			.flatMap { volumes in
+				return container.save(volumes: volumes)
+			}
+			.flatMap { [unowned self] _ in
+				return Observable.concat([
+					Observable.just(current),
+					Observable.never().takeUntil(trigger),
+					self.doLoad(page: (current + 1), nextPage: trigger)
+				])
+			}
+		
     }
 }

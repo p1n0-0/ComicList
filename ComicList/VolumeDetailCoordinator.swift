@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ComicContainer
 
 /// Coordinates the presentation of a volume detail
 final class VolumeDetailCoordinator: Coordinator {

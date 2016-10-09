@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import ComicContainer
 
 /// Displays the search results for a given query
 final class SearchResultsViewController: UITableViewController {
