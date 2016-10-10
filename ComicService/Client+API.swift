@@ -26,4 +26,8 @@ extension Client {
 		return objects(forResource: API.suggestions(query: query))
 	}
 	
+	public func issues(forVolumeIdentifier identifier:Int) -> Observable<[Issue]> {
+		return objects(forResource: API.issues(volumeIdentifier: identifier))
+	}
+	
 }

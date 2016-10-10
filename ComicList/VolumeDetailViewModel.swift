@@ -45,16 +45,10 @@ final class VolumeDetailViewModel: VolumeDetailViewModelType {
 		.startWith("")
 		.observeOn(MainScheduler.instance)
 
-    private(set) var issues: Observable<[Issue]> = Observable.just([
-        Issue(title: "Lorem fistrum", coverURL: URL(string: "http://static.comicvine.com/uploads/scale_small/3/38919/1251093-thanos_imperative_1.jpg")),
-        Issue(title: "Quietooor ahorarr", coverURL: URL(string: "http://static.comicvine.com/uploads/scale_small/0/9116/1299822-296612.jpg")),
-        Issue(title: "Apetecan", coverURL: URL(string: "http://static.comicvine.com/uploads/scale_small/5/57845/1333458-cover.jpg")),
-        Issue(title: "Rodrigor mamaar", coverURL: URL(string: "http://static.comicvine.com/uploads/scale_small/5/56213/1386494-thanos_imperative__4.jpg")),
-        Issue(title: "Benemeritaar", coverURL: URL(string: "http://static.comicvine.com/uploads/scale_small/3/38919/1452486-thanos_imperative_5.jpg")),
-        Issue(title: "Caballo blanco caballo negroorl", coverURL: URL(string: "http://static.comicvine.com/uploads/scale_small/3/38919/1503818-thanos_imperative_6.jpg")),
-        Issue(title: "Quietooor diodeno", coverURL: URL(string: "http://static.comicvine.com/uploads/scale_small/3/39027/4609736-4608485-cgxpqgqw0aao_8t+-+copy.jpg"))
-    ])
-
+	private(set) lazy var issues: Observable<[Issue]> = self.client.objects(forResource: API.issues(volumeIdentifier: self.volume.identifier))
+		.observeOn(MainScheduler.instance)
+	
+	
 	private let container: VolumeContainerType
 	private let client: Client
 	private let saved: Variable<Bool>

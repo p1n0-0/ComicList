@@ -12,6 +12,7 @@ public enum API {
 	case suggestions(query: String)
 	case search(query:String, page:Int)
 	case description(volumeIdentifier: Int)
+	case issues(volumeIdentifier: Int)
 }
 
 extension API: Resource {
@@ -22,6 +23,8 @@ extension API: Resource {
 			return "search"
 		case .description(volumeIdentifier: let identifier):
 			return "volume/4050-\(identifier)"
+		case .issues:
+			return "issues"
 		}
 	}
 	
@@ -50,7 +53,14 @@ extension API: Resource {
 				"format": "json",
 				"field_list": "description"
 			]
+		case .issues(volumeIdentifier: let i):
+			return [
+				"format": "json",
+				"field_list": "id,image,name,volume",
+				"filter": "volume:\(i)"
+			]
 		}
+
 	}
 	
 }
