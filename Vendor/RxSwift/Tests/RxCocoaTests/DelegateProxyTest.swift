@@ -1,6 +1,6 @@
 //
 //  DelegateProxyTest.swift
-//  RxTests
+//  Tests
 //
 //  Created by Krunoslav Zaher on 7/5/15.
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
@@ -431,7 +431,7 @@ class MockThreeDSectionedViewProtocol : NSObject, ThreeDSectionedViewProtocol {
     }
 }
 
-#if os(OSX)
+#if os(macOS)
 extension MockTestDelegateProtocol
     : NSTextFieldDelegate {
 

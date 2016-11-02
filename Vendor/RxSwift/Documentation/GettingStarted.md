@@ -584,17 +584,15 @@ extension Reactive where Base: URLSession {
 
 ## Operators
 
-There are numerous operators implemented in RxSwift. The complete list can be found [here](API.md).
+There are numerous operators implemented in RxSwift.
 
 Marble diagrams for all operators can be found on [ReactiveX.io](http://reactivex.io/)
 
 Almost all operators are demonstrated in [Playgrounds](../Rx.playground).
 
-To use playgrounds please open `Rx.xcworkspace`, build `RxSwift-OSX` scheme and then open playgrounds in `Rx.xcworkspace` tree view.
+To use playgrounds please open `Rx.xcworkspace`, build `RxSwift-macOS` scheme and then open playgrounds in `Rx.xcworkspace` tree view.
 
 In case you need an operator, and don't know how to find it there a [decision tree of operators](http://reactivex.io/documentation/operators.html#tree).
-
-[Supported RxSwift operators](API.md#rxswift-supported-operators) are also grouped by function they perform, so that can also help.
 
 ### Custom operators
 
@@ -710,7 +708,7 @@ so please try not to do this.
 
 If you are unsure how exactly some of the operators work, [playgrounds](../Rx.playground) contain almost all of the operators already prepared with small examples that illustrate their behavior.
 
-**To use playgrounds please open Rx.xcworkspace, build RxSwift-OSX scheme and then open playgrounds in Rx.xcworkspace tree view.**
+**To use playgrounds please open Rx.xcworkspace, build RxSwift-macOS scheme and then open playgrounds in Rx.xcworkspace tree view.**
 
 **To view the results of the examples in the playgrounds, please open the `Assistant Editor`. You can open `Assistant Editor` by clicking on `View > Assistant Editor > Show Assistant Editor`**
 
@@ -842,9 +840,9 @@ extension ObservableType {
 
 ## Debugging memory leaks
 
-In debug mode Rx tracks all allocated resources in a global variable `resourceCount`.
+In debug mode Rx tracks all allocated resources in a global variable `Resources.total`.
 
-In case you want to have some resource leak detection logic, the simplest method is just printing out `RxSwift.resourceCount` periodically to output.
+In case you want to have some resource leak detection logic, the simplest method is just printing out `RxSwift.Resources.total` periodically to output.
 
 ```swift
     /* add somewhere in
@@ -852,7 +850,7 @@ In case you want to have some resource leak detection logic, the simplest method
     */
     _ = Observable<Int>.interval(1, scheduler: MainScheduler.instance)
         .subscribe(onNext: { _ in
-            print("Resource count \(RxSwift.resourceCount)")
+            print("Resource count \(RxSwift.Resources.total)")
         })
 ```
 
@@ -1004,7 +1002,7 @@ KVO is an Objective-C mechanism so it relies heavily on `NSValue`.
 
 When observing some other structures it is necessary to extract those structures from `NSValue` manually.
 
-[Here](../RxCocoa/Common/KVORepresentable+CoreGraphics.swift) are examples how to extend KVO observing mechanism and `rx.observe*` methods for other structs by implementing `KVORepresentable` protocol.
+[Here](../RxCocoa/Foundation/KVORepresentable+CoreGraphics.swift) are examples how to extend KVO observing mechanism and `rx.observe*` methods for other structs by implementing `KVORepresentable` protocol.
 
 ## UI layer tips
 

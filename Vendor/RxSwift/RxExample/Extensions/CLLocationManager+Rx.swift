@@ -1,6 +1,6 @@
 //
 //  CLLocationManager+Rx.swift
-//  RxCocoa
+//  RxExample
 //
 //  Created by Carlos García on 8/7/15.
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
@@ -45,7 +45,7 @@ extension Reactive where Base: CLLocationManager {
             }
     }
 
-    #if os(iOS) || os(OSX)
+    #if os(iOS) || os(macOS)
     /**
     Reactive wrapper for `delegate` message.
     */
@@ -117,7 +117,7 @@ extension Reactive where Base: CLLocationManager {
 
     #endif
 
-    #if os(iOS) || os(OSX)
+    #if os(iOS) || os(macOS)
     
     /**
     Reactive wrapper for `delegate` message.

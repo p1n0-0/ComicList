@@ -499,13 +499,13 @@
 				8244148E1DA2E38500781B61 /* RxBlocking.framework */,
 				824414901DA2E38500781B61 /* RxBlocking.framework */,
 				824414921DA2E38500781B61 /* RxBlocking.framework */,
-				824414941DA2E38500781B61 /* RxTests.framework */,
-				824414961DA2E38500781B61 /* RxTests.framework */,
-				824414981DA2E38500781B61 /* RxTests.framework */,
-				8244149A1DA2E38500781B61 /* RxTests.framework */,
+				824414941DA2E38500781B61 /* RxTest.framework */,
+				824414961DA2E38500781B61 /* RxTest.framework */,
+				824414981DA2E38500781B61 /* RxTest.framework */,
+				8244149A1DA2E38500781B61 /* RxTest.framework */,
 				8244149C1DA2E38500781B61 /* AllTests-iOS.xctest */,
 				8244149E1DA2E38500781B61 /* AllTests-tvOS.xctest */,
-				824414A01DA2E38500781B61 /* AllTests-OSX.xctest */,
+				824414A01DA2E38500781B61 /* AllTests-macOS.xctest */,
 				824414A21DA2E38500781B61 /* PerformanceTests.app */,
 			);
 			name = Products;
@@ -820,13 +820,13 @@
 				TargetAttributes = {
 					8203388D1DA3C1F0001E7F32 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = T5TF72MCE6;
+						DevelopmentTeam = 8Y8DX8Q88R;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					820338CD1DA3DA19001E7F32 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = T5TF72MCE6;
+						DevelopmentTeam = 8Y8DX8Q88R;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -962,31 +962,31 @@
 			remoteRef = 824414911DA2E38500781B61 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		824414941DA2E38500781B61 /* RxTests.framework */ = {
+		824414941DA2E38500781B61 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 824414931DA2E38500781B61 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		824414961DA2E38500781B61 /* RxTests.framework */ = {
+		824414961DA2E38500781B61 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 824414951DA2E38500781B61 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		824414981DA2E38500781B61 /* RxTests.framework */ = {
+		824414981DA2E38500781B61 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 824414971DA2E38500781B61 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8244149A1DA2E38500781B61 /* RxTests.framework */ = {
+		8244149A1DA2E38500781B61 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 824414991DA2E38500781B61 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1004,10 +1004,10 @@
 			remoteRef = 8244149D1DA2E38500781B61 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		824414A01DA2E38500781B61 /* AllTests-OSX.xctest */ = {
+		824414A01DA2E38500781B61 /* AllTests-macOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "AllTests-OSX.xctest";
+			path = "AllTests-macOS.xctest";
 			remoteRef = 8244149F1DA2E38500781B61 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1210,7 +1210,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = T5TF72MCE6;
+				DEVELOPMENT_TEAM = 8Y8DX8Q88R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1235,7 +1235,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = T5TF72MCE6;
+				DEVELOPMENT_TEAM = 8Y8DX8Q88R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1259,7 +1259,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = T5TF72MCE6;
+				DEVELOPMENT_TEAM = 8Y8DX8Q88R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1284,7 +1284,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = T5TF72MCE6;
+				DEVELOPMENT_TEAM = 8Y8DX8Q88R;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1342,7 +1342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1386,7 +1386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1401,6 +1401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Y8DX8Q88R;
 				INFOPLIST_FILE = ComicList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gonzalezreal.ComicList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1415,6 +1416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8Y8DX8Q88R;
 				INFOPLIST_FILE = ComicList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gonzalezreal.ComicList;
 				PRODUCT_NAME = "$(TARGET_NAME)";

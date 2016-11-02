@@ -88,7 +88,7 @@ class VolumeDetailViewController: UIViewController {
 
         viewModel.about
             .map { $0?.isEmpty ?? true }
-            .bindTo(aboutView.rx.hidden)
+            .bindTo(aboutView.rx.isHidden)
             .addDisposableTo(disposeBag)
 
         // Bind issues
@@ -106,7 +106,7 @@ class VolumeDetailViewController: UIViewController {
 
         viewModel.issues
             .map { $0.isEmpty }
-            .bindTo(issuesView.rx.hidden)
+            .bindTo(issuesView.rx.isHidden)
             .addDisposableTo(disposeBag)
     }
 }

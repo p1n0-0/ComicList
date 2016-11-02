@@ -1,6 +1,6 @@
 //
 //  SentMessageTest.swift
-//  RxTests
+//  Tests
 //
 //  Created by Krunoslav Zaher on 11/21/15.
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
@@ -1526,5 +1526,3 @@ public func ==(lhs: some_insanely_large_struct, rhs: some_insanely_large_struct)
     if lhs.a.7 != rhs.a.7 { return false }
     return lhs.some_large_text == rhs.some_large_text && lhs.next == rhs.next
 }
-
-typealias MethodParameters = [Any]

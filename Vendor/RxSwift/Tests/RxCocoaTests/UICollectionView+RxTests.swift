@@ -1,6 +1,6 @@
 //
 //  UICollectionView+RxTests.swift
-//  Rx
+//  Tests
 //
 //  Created by Krunoslav Zaher on 4/8/16.
 //  Copyright © 2016 Krunoslav Zaher. All rights reserved.
@@ -248,7 +248,7 @@ class UICollectionViewTests : RxTest {
         }
         let (collectionView, dataSourceSubscription) = createView()
 
-        let model: Int = try! collectionView.rx.model(IndexPath(item: 1, section: 0))
+        let model: Int = try! collectionView.rx.model(at: IndexPath(item: 1, section: 0))
 
         XCTAssertEqual(model, 2)
 
