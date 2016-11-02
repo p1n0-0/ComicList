@@ -17,7 +17,13 @@ public struct VolumeDescription {
 extension VolumeDescription: JSONDecodable {
 	
 	public init?(dictionary: JSONDictionary) {
-		description = dictionary["description"] as? String
+		
+		guard let description:String = dictionary["description"] as? String else {
+			self.description = nil
+			return
+		}
+		
+		self.description = description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
 	}
 	
 }
